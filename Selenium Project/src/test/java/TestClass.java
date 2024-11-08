@@ -83,10 +83,9 @@ public class TestClass {
         WebElement emailAddressField = driver.findElement(By.cssSelector("input[type='text']"));
         WebElement passwordField = driver.findElement(By.cssSelector("input[type='password']"));
         WebElement loginButton = driver.findElement(By.cssSelector("button[name='login']"));
-        Actions builder = new Actions(driver);
-        builder.sendKeys(emailAddressField, "123").perform();
-        builder.sendKeys(passwordField, "sasha123").perform();
-        builder.click(loginButton).perform();
+        emailAddressField.sendKeys("123");
+        passwordField.sendKeys("sasha123");
+        loginButton.click();
         WebElement noticeError = driver.findElement(By.xpath("//*[normalize-space(text())='Wrong password " +
                 "or the account is disabled, or does not exist']"));
         Assert.assertTrue(noticeError.isDisplayed());
@@ -99,8 +98,7 @@ public class TestClass {
         driver.get("https://litecart.stqa.ru/en/");
         WebElement newCustomersButton = driver.findElement(By.xpath("//a[@href='https://litecart.stqa.ru/en/create_account']" +
                 "[text()='New customers click here']"));
-        Actions builder = new Actions(driver);
-        builder.click(newCustomersButton).perform();
+        newCustomersButton.click();
         WebElement newPage = driver.findElement(By.id("create-account"));
         Assert.assertTrue(newPage.isDisplayed());
         driver.quit();
@@ -135,8 +133,7 @@ public class TestClass {
         WebElement checkoutButton = driver.findElement(By.cssSelector("a.link[href='https://litecart.stqa.ru/en/checkout']"));
         checkoutButton.click();
         WebElement inputField = driver.findElement(By.cssSelector("input[type='number']"));
-        Actions builder = new Actions(driver);
-        builder.sendKeys(inputField,"1").perform();
+        inputField.sendKeys("1");
         WebElement updateButton = driver.findElement(By.cssSelector("button[type='submit'][name='update_cart_item']"));
         updateButton.click();
         WebElement totalAmount = (new WebDriverWait(driver, Duration.ofSeconds(4))).
