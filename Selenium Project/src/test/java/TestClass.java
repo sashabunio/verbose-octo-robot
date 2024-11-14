@@ -133,13 +133,14 @@ public class TestClass {
         WebElement checkoutButton = driver.findElement(By.cssSelector("a.link[href='https://litecart.stqa.ru/en/checkout']"));
         checkoutButton.click();
         WebElement inputField = driver.findElement(By.cssSelector("input[type='number']"));
-        inputField.sendKeys("1");
+        inputField.clear();
+        inputField.sendKeys("2");
         WebElement updateButton = driver.findElement(By.cssSelector("button[type='submit'][name='update_cart_item']"));
         updateButton.click();
         WebElement totalAmount = (new WebDriverWait(driver, Duration.ofSeconds(4))).
                 until(ExpectedConditions.presenceOfElementLocated
-                        (By.xpath("//strong[text()=\"$220.00\"]")));
-        String expectedValue = "$220.00";
+                        (By.xpath("//strong[text()=\"$40.00\"]")));
+        String expectedValue = "$40.00";
         Assert.assertEquals(totalAmount.getText(), expectedValue);
         driver.quit();
     }
