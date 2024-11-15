@@ -63,6 +63,7 @@ public class TestClass {
         WebElement button = driver.findElement(By.cssSelector("[class='context-menu-one btn btn-neutral']"));
         Actions builder = new Actions(driver);
         builder.contextClick(button).perform();
+        driver.quit();
     }
 
     @Test
@@ -73,6 +74,7 @@ public class TestClass {
         WebElement goal = driver.findElement(By.id("gate"));
         Actions builder = new Actions(driver);
         builder.dragAndDrop(ball, goal).perform();
+        driver.quit();
     }
 
     // дз 04/11

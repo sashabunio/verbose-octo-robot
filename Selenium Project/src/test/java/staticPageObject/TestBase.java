@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeMethod;
 
 public class TestBase {
 
-    static WebDriver driver;
+    public static WebDriver driver;
     String baseUrl = "https://litecart.stqa.ru/en/";
 
     @BeforeMethod
@@ -22,14 +22,6 @@ public class TestBase {
         driver = switch (browser) {
         case chrome -> new ChromeDriver();
         case edge -> new EdgeDriver();
-
-//
-//        String browser = System.getProperty("browser", "chrome");
-//
-//        driver = switch (browser) {
-//            case "chrome" -> new ChromeDriver();
-//            case "edge" -> new EdgeDriver();
-//            default -> new ChromeDriver();
         };
 
         driver.get(baseUrl);
