@@ -14,10 +14,10 @@ public class CartSummary {
     private static By checkoutButton = By.cssSelector("a.link[href='https://litecart.stqa.ru/en/checkout']");
 
 
-    public static void waitUntilAmountIsUpdated(WebDriver driver) { // как использовать ожидания в page objects? сомневаюсь что это правильно
+    public static void waitUntilAmountIsUpdated(WebDriver driver, String locator) {
         WebElement cartItems = ((new WebDriverWait(driver, Duration.ofSeconds(4))).
                 until(ExpectedConditions.presenceOfElementLocated
-                        (By.xpath("//img[@src='/includes/templates/default.catalog/images/cart_filled.png']"))));
+                        (By.xpath(locator))));
     }
 
     public static boolean cartItemIsDisplayed (WebDriver driver) {

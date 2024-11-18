@@ -10,6 +10,7 @@ public class CategoriesPageTest extends TestBase {
         String expectedResult = "Blue Duck";
         HomePage.openRubberDucksTab(driver);
         CategoriesPage.clickPopularityButton(driver);
-        Assert.assertEquals(CategoriesPage.getAttributeOfBlueDuck(driver), expectedResult);
+        Assert.assertEquals(CategoriesPage.getAttributeOfBlueDuck(driver, "title"), expectedResult,
+                "Blue duck is not the most popular item anymore");
     }
 }

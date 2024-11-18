@@ -26,10 +26,10 @@ public class OrderPage {
         driver.findElement(updateButton).click();
     }
 
-    public static void waitUntilPageIsUpdating (WebDriver driver) { // тут с ожиданием такая же шляпа
+    public static void waitUntilPageIsUpdating (WebDriver driver, String expectedText) {
         WebElement totalAmount = (new WebDriverWait(driver, Duration.ofSeconds(4))).
                 until(ExpectedConditions.presenceOfElementLocated
-                        (By.xpath("//strong[text()=\"$40.00\"]")));
+                        (By.xpath(expectedText)));
     }
 
     public static String getTotalAmountText (WebDriver driver) {

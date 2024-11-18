@@ -5,8 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.actions;
+import static com.codeborne.selenide.Selenide.*;
 import static staticPageObject.TestBase.driver;
 
 public class HomePage {
@@ -23,7 +22,7 @@ public class HomePage {
     }
 
     public static String getHomePageTitle() {
-        return driver.getTitle();
+        return title();
     }
 
     public static void openRubberDucksTab() {

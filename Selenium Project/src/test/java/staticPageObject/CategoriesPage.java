@@ -18,7 +18,7 @@ public class CategoriesPage {
         driver.findElement(popularityButton).click();
     }
 
-    public static String getAttributeOfBlueDuck (WebDriver driver) {
-        return driver.findElement(blueDuck).getAttribute("title");
+    public static String getAttributeOfBlueDuck(WebDriver driver, String attribute) {
+        return driver.findElement(blueDuck).getAttribute(attribute);
     }
 }

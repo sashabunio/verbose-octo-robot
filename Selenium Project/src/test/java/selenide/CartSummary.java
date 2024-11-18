@@ -17,13 +17,6 @@ public class CartSummary {
     private static By cartItems = By.xpath("//img[@src='/includes/templates/default.catalog/images/cart_filled.png']");
     private static By checkoutButton = By.cssSelector("a.link[href='https://litecart.stqa.ru/en/checkout']");
 
-//
-//    public static void waitUntilAmountIsUpdated() { // тут тоже пришлось использовать драйвер
-//        WebElement cartItems = ((new WebDriverWait(driver, Duration.ofSeconds(4))).
-//                until(ExpectedConditions.presenceOfElementLocated
-//                        (By.xpath("//img[@src='/includes/templates/default.catalog/images/cart_filled.png']"))));
-//    }
-
     public static void cartItemIsDisplayed () {
         $(cartItems).shouldBe(Condition.visible);
     }

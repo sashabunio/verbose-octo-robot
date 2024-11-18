@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.title;
 import static staticPageObject.TestBase.driver;
 
 public class CategoriesPage {
@@ -15,14 +16,14 @@ public class CategoriesPage {
 
 
     public static String getRubberDuckTabTitle () {
-        return driver.getTitle(); // тут надо драйвер использовать или как-то по-другому переделать?
+        return title();
     }
 
     public static void clickPopularityButton () {
         $(popularityButton).click();
     }
 
-    public static String getAttributeOfBlueDuck () {
-        return $(blueDuck).getAttribute("title");
+    public static String getAttributeOfBlueDuck (String attribute) {
+        return $(blueDuck).getAttribute(attribute);
     }
 }

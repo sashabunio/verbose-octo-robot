@@ -30,8 +30,8 @@ public class HomePage {
         driver.findElement(redDuck).click();
     }
 
-    public static void hoverOverRubberDucksTab (WebDriver driver) { // как работать с Actions классом в Page Object?
-        WebElement rubberDucksTab = driver.findElement(By. cssSelector("[href='https://litecart.stqa.ru/en/rubber-ducks-c-1/']"));
+    public static void hoverOverRubberDucksTab (WebDriver driver) {
+        WebElement rubberDucksTab = driver.findElement(By.cssSelector("[href='https://litecart.stqa.ru/en/rubber-ducks-c-1/']"));
         Actions builder = new Actions(driver);
         builder.moveToElement(rubberDucksTab).perform();
     }

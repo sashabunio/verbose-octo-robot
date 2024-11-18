@@ -1,19 +1,9 @@
 package selenide;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.conditions.Text;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
-
-import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
-import static staticPageObject.TestBase.driver;
 
 public class OrderPage {
 
@@ -33,8 +23,8 @@ public class OrderPage {
         $(updateButton).click();
     }
 
-    public static void getTotalAmountText (String exptectedText) {
-        $(totalAmount).shouldHave(Condition.text(exptectedText));
+    public static void getTotalAmountText (String expectedText) {
+        $(totalAmount).shouldHave(Condition.text(expectedText));
     }
 
 
