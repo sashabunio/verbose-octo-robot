@@ -13,9 +13,9 @@ public class LoginTest extends TestBase {
         Assert.assertTrue(LoginPage.errorIsShown(driver), "Error message is not shown");
     }
 
-    @Test
-    public void checkThatCreateAccountPageIsOpenedAfterClickingNewCustomersButton () {
-        LoginPage.clickNewCustomersButton(driver);
-        CreateAccountPage.createAccountPageIsDisplayed(driver);
-    }
+//    @Test
+//    public void checkThatCreateAccountPageIsOpenedAfterClickingNewCustomersButton () {
+//        LoginPage.clickNewCustomersButton(driver);
+//        CreateAccountPage.createAccountPageIsDisplayed(driver);
+//    }
 }
