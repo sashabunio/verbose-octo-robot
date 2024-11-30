@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.title;
-import static staticPageObject.TestBase.driver;
 
 public class CategoriesPage {
 
