@@ -11,7 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 import static com.codeborne.selenide.Selenide.$;
-import static staticPageObject.TestBase.driver;
 
 public class CartSummary {
 

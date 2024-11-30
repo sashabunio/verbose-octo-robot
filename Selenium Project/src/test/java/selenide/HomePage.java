@@ -8,7 +8,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.*;
-//import static staticPageObject.TestBase.driver;
 
 public class HomePage {
 
