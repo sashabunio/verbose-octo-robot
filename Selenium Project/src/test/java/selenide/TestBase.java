@@ -52,7 +52,7 @@ public class TestBase {
         Configuration.remote="http://localhost:4444/wd/hub";
         Configuration.browserCapabilities = caps;
         Configuration.pageLoadTimeout = 5000;
-//        Configuration.browser = String.valueOf(browser);
+        Configuration.browser = String.valueOf(browser);
         Configuration.baseUrl = "https://litecart.stqa.ru/en/";
         open("https://litecart.stqa.ru/en/");
     }
