@@ -42,7 +42,7 @@ public class TestBase {
             chrome,
             edge
         }
-        Browser browser = Browser.valueOf(System.getProperty("browser", "edge"));
+        Browser browser = Browser.valueOf(System.getProperty("browser", "chrome"));
         Configuration.browser = switch (browser) {
             case chrome -> CHROME;
             case edge -> EDGE;
