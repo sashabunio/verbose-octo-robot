@@ -42,19 +42,19 @@ public class TestBase {
             chrome,
             edge
         }
-        Browser browser = Browser.valueOf(System.getProperty("browser", "chrome"));
+        Browser browser = Browser.valueOf(System.getProperty("browser", "edge"));
         Configuration.browser = switch (browser) {
             case chrome -> CHROME;
             case edge -> EDGE;
         };
-        caps.setBrowserName(String.valueOf(browser));
+//        caps.setBrowserName(String.valueOf(browser));
 
         Configuration.remote="http://localhost:4444/wd/hub";
         Configuration.browserCapabilities = caps;
-        open("https://litecart.stqa.ru/en/");
         Configuration.pageLoadTimeout = 5000;
-        Configuration.browser = String.valueOf(browser);
+//        Configuration.browser = String.valueOf(browser);
         Configuration.baseUrl = "https://litecart.stqa.ru/en/";
+        open("https://litecart.stqa.ru/en/");
     }
 }
 
